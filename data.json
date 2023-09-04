@@ -1,0 +1,18 @@
+{
+    "module": "utils.data_process",
+    "function": "dict_data_process",
+    "data": {
+        "ERROR number 1": {
+            "ident": "2.1.11",
+            "value": " test   test   "
+        },
+        "ERROR number 2": {
+            "ident": "2.1.2",
+            "value": " bla bla   "
+        },
+        "ERROR number 3": {
+            "ident": "2.5",
+            "value": "Boo Boo     Boo"
+        }
+    }
+}
