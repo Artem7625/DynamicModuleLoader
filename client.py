@@ -1,5 +1,5 @@
 import json
-from typing import Any, Dict, List, TypeAlias
+from typing import Dict, List, TypeAlias
 
 import requests  # type: ignore
 
@@ -8,17 +8,17 @@ request_data: TypeAlias = Dict[str, str | Dict[str, Dict[str, str]]]
 response_data: TypeAlias = Dict[str, str | Dict[str, Dict[str, List[str]]]]
 
 
-def get_json_data(path: str) -> Dict[Any, Any]:
+def get_json_data(path: str) -> request_data:
     """Loads a JSON data with request param."""
 
     with open(path, 'r', encoding='utf-8') as load_file:
-        data: Dict[Any, Any] = json.load(load_file)
+        data: request_data = json.load(load_file)
 
     return data
 
 
 def make_post_req(url: str) -> response_data:
-    """Makes post request with JSON param."""
+    """Makes post request with JSON data."""
 
     headers = {"Content-Type": "application/json"}
     data: request_data = get_json_data(path='data.json')
